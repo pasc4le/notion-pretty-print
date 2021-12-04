@@ -1,0 +1,30 @@
+.home_page_wrapper {
+  @apply flex items-center justify-center flex-col;
+  @apply w-screen h-screen;
+  @apply dark:bg-gray-900;
+
+  .brand {
+    @apply font-montserrat font-semibold text-5xl sm:text-7xl;
+    @apply dark:text-white;
+  }
+
+  .searchbox {
+    @apply border-2 border-gray-300 px-5 py-2 rounded-full;
+    @apply text-sm font-montserrat sm:text-xl;
+    @apply mt-4;
+    @apply focus:outline-none focus:ring-1 focus:ring-green-500 focus:ring-opacity-50;
+  }
+
+  .search_results_wrapper {
+    @apply flex flex-col;
+    @apply w-3/4 mt-5;
+    max-width: 500px;
+  }
+
+  .search_result {
+    @apply dark:text-white font-open-sans border-b-2 border-gray-800 dark:border-white w-full;
+    @apply text-sm sm:text-xl;
+    @apply hover:bg-gray-100 dark:hover:bg-gray-800;
+    @apply px-2 py-4;
+  }
+}

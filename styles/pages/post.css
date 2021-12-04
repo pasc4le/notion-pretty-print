@@ -1,0 +1,216 @@
+.note_wrapper {
+  @apply flex items-center justify-center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  .note_container {
+    max-width: 850px;
+    width: 90%;
+    font-family: '212 Baby Girl';
+    font-size: 18px;
+    line-height: 25px;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Bella Safira';
+      margin: 25px 0 10px 0;
+    }
+
+    .name {
+        font-size: 3.57em;
+        line-height: 1.75em;
+        position: relative;
+        color: black !important;
+        margin: 0;
+    }
+    
+    .name::after {
+        content: ' ';
+        position: absolute;
+        width: 150px;
+        height: 20px;
+        opacity: 0.3;
+        bottom: 5px;
+        left: 10px;
+        z-index: -1;
+        border-radius: 3px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        line-height: 1.6em;
+    }
+
+    h2 {
+        font-size: 2.14em;
+        line-height: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.78em;
+        line-height: 1.2em;
+    }
+
+    .code {
+        @apply font-mono bg-red-500 bg-opacity-50 px-1 py-1 rounded-sm text-red-800;
+        font-size: 0.71em;
+    }
+
+    .bold {
+        @apply font-bold;
+    }
+
+    .strikethrough {
+        text-decoration: line-through;
+    }
+
+    .underline {
+        text-decoration: underline;
+    }
+
+    .italic {
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    .katex {
+        font: normal 1em KaTeX_Main, Times New Roman, serif;
+    }
+    
+    .katex-display {
+        font: normal 1.25em KaTeX_Main, Times New Roman, serif !important;
+    }
+
+    blockquote::before {
+        content: '"'; 
+        position: absolute;
+        font-size: 50px;
+        top: 0;
+        left: 0;
+        transform: scaleX(-1) rotate(-10deg);
+        font-family: 'Bella Safira';
+    }
+
+    blockquote::after {
+        content: '"';
+        position: absolute;
+        bottom: -0.42em;
+        right: 0;
+        font-family: 'Bella Safira';
+        transform: rotate(5deg);
+        font-size: 3.57em;
+    }
+
+    blockquote {
+        position: relative;
+        box-shadow: inset white -0.42em -0.21em 0 0;
+        background: #eee;
+        @apply pr-2 pl-5 py-1;
+    }
+
+    code {
+        @apply !font-mono;
+    }
+
+    .bookmark {
+        @apply bg-gray-100 p-4 rounded-md shadow-sm;
+
+        .bookmark-info {
+            @apply flex mb-3;
+
+            .left {
+                @apply flex font-montserrat items-center justify-center;
+
+                img {
+                    @apply w-5 h-5 mr-2;
+                }
+            }
+
+            svg {
+                @apply ml-auto border-white;
+            }
+        }
+
+        .caption {
+            font-size: 0.7em;
+            color: gray !important;
+        }
+    }
+
+    hr {
+        @apply my-2 text-gray-200;
+    }
+
+    .gray {
+        @apply text-gray-500;
+    }
+
+    .green {
+        @apply text-green-500;
+    }
+
+    .blue {
+        @apply text-blue-500;
+    }
+
+    .red {
+        @apply text-red-600;
+    }
+
+    .pink {
+        @apply text-pink-500;
+    }
+
+    .gray_background {
+        @apply bg-gray-500 bg-opacity-30;
+    }
+
+    .green_background {
+        @apply bg-green-500 bg-opacity-30;
+    }
+
+    .blue_background {
+        @apply bg-blue-500 bg-opacity-30;
+    }
+
+    .red_background {
+        @apply bg-red-500 bg-opacity-30;
+    }
+
+    .pink_background {
+        @apply bg-pink-500 bg-opacity-30;
+    }
+
+    figure {
+        @apply my-2;
+        display: grid;
+        place-items: center;
+
+        figcaption {
+            color: gray;
+            font-size: 0.75em !important;
+        }
+    }
+  }
+}
+
+@media print {
+  .note_wrapper {
+    padding: unset;
+    display: block;
+  }
+
+  .note_container {
+    width: 100% !important;
+    max-width: unset !important;
+    font-size: 14px !important;
+    
+    .error {
+        display: none;
+    }
+  }
+}
+
+@page {
+    size: 21cm 29.7cm;
+    margin: 17mm 25mm 17mm 25mm;
+}
